@@ -43,9 +43,9 @@ const toggleShowModal = () => {
 };
 
 
-const editTask = (data : object) => {
+const editTask = () => {
   showModal.value = true;
-  console.log('edit data =>', data)
+  // console.log('edit data =>', data)
 };
 
 </script>

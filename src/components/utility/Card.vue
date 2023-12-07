@@ -8,7 +8,7 @@
         <p class="text-gray-700 text-sm mb-2">Due Date: {{ cardData.dueDate }}</p>
         <p class="text-gray-700 text-sm mb-2">Status: {{ cardData.status }}</p>
         <button
-          @click="editCard(cardData)"
+          @click="editCard()"
           class="bg-green-500 text-white font-semibold text-base py-2 px-4 rounded focus:outline-none focus:shadow-outline-green active:bg-green-600"
         >
           Edit

@@ -1,6 +1,5 @@
-import { ref, computed, type Ref } from "vue";
+import { ref, type Ref } from "vue";
 import { defineStore } from "pinia";
-import { nanoid } from "nanoid";
 
 type task = { id: string; title: string; status: string, description: string, dueDate: string };
 
@@ -29,7 +28,7 @@ export const useTaskStore = defineStore("taskStore", () => {
     localStorage.setItem(lsKey, JSON.stringify(tasks.value));
   }
 
-  function addTask(task) {
+  function addTask(task : task) {
     tasks.value = [
       ...tasks.value, task
     ];
