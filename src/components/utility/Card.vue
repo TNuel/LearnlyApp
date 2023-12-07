@@ -1,15 +1,24 @@
 <template>
   <div
-    class="max-w-lg mx-auto overflow-hidden bg-white shadow-lg rounded-md hover:shadow-xl transition-transform duration-200 transform hover:scale-105"
+    class="max-w-md mx-auto my-4 overflow-hidden bg-white shadow-lg rounded-md hover:shadow-xl transition-transform duration-200 transform hover:scale-105"
   >
     <div class="px-6 py-4">
-        <h1 class="font-bold text-xl mb-2 text-gray-700 ">Title: {{ cardData.title }}</h1>
-        <p class="text-gray-700 text-base mb-2">Description: {{ cardData.description }}</p>
-        <p class="text-gray-700 text-sm mb-2">Due Date: {{ cardData.dueDate }}</p>
-        <p class="text-gray-700 text-sm mb-2">Status: {{ cardData.status }}</p>
+        <div class="font-semiboldbold text-xl mb-2 text-gray-500w-full flex items-center">Title: <div class="ml-3 font-bold text-gray-600 capitalize">{{ cardData.title }}</div></div>
+        <p class="text-gray-700 text-base mb-2">Description: <span class="font-semiboldml-3">{{ cardData.description }}</span></p>
+        <p class="text-gray-700 text-sm mb-2">Due Date: <span class="font-semiboldml-3">{{ cardData.dueDate }}</span></p>
+        <p class="text-gray-700 text-sm mb-2"
+        
+        >Status: <span class="ml-3"
+        :class="{
+            'text-gray-500 font-semibold' : cardData.status == 'Pending',
+            'text-primary font-semibold' : cardData.status == 'In Progress',
+            'text-red-400 font-bold' : cardData.status == 'Deprioritized',
+            'text-green-300 font-semibold' : cardData.status == 'Done'}"
+        >{{ cardData.status }}</span></p>
+        <!-- @click="editCard()" -->
         <button
-          @click="editCard()"
-          class="bg-green-500 text-white font-semibold text-base py-2 px-4 rounded focus:outline-none focus:shadow-outline-green active:bg-green-600"
+          @click="$emit('editCard', cardData)"
+          class="hover:bg-primary text-primary hover:text-white font-semibold text-base py-2 px-4 rounded focus:outline-none focus:shadow-outline-blue active:bg-primary"
         >
           Edit
         </button>
@@ -33,9 +42,9 @@ defineProps({
       type: Object as PropType<CardData>,
       required: true,
     },
-    editCard: {
-      type: Function as PropType<() => void>,
-      required: true,
-    },
+    // editCard: {
+    //   type: Function as PropType<() => {}>,
+    //   required: true,
+    // },
   });
 </script>
