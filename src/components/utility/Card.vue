@@ -4,8 +4,8 @@
   >
     <div class="px-6 py-4">
         <div class="font-semiboldbold text-xl mb-2 text-gray-500w-full flex items-center">Title: <div class="ml-3 font-bold text-gray-600 capitalize">{{ cardData.title }}</div></div>
-        <p class="text-gray-700 text-base mb-2">Description: <span class="font-semiboldml-3">{{ cardData.description }}</span></p>
-        <p class="text-gray-700 text-sm mb-2">Due Date: <span class="font-semiboldml-3">{{ cardData.dueDate }}</span></p>
+        <p class="text-gray-700 text-base mb-2">Description: <span class="font-semibold ml-3">{{ cardData.description }}</span></p>
+        <p class="text-gray-700 text-sm mb-2">Due Date: <span class="font-semibold ml-3">{{ cardData.dueDate }}</span></p>
         <p class="text-gray-700 text-sm mb-2"
         
         >Status: <span class="ml-3"
