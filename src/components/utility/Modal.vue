@@ -152,7 +152,7 @@ interface FormData {
   status: string;
 }
 
-const prop = defineProps({
+defineProps({
   isVisible: {
     type: Boolean as PropType<boolean>,
     required: true,
@@ -200,6 +200,6 @@ const submitForm = async () => {
     formData.status = "";
   }
 //   addTask();
-  prop.closeModal();
+//   prop.closeModal();
 };
 </script>
