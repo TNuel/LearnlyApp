@@ -200,6 +200,6 @@ const submitForm = async () => {
     formData.status = "";
   }
 //   addTask();
-  prop.closeModal();
+//   prop.closeModal();
 };
 </script>

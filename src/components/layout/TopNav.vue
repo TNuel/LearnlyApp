@@ -22,7 +22,7 @@
             <div>TeachMateAI</div>
           </div>
         </div>
-        <div class="bubble-element Text">
+        <div class="bubble-element Text text-center">
           The #1 education AI assistant, trusted by over 101,000 educators worldwide.
         </div>
       </div>
