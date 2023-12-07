@@ -77,7 +77,6 @@
 
 <script setup lang="ts">
 import { defineProps, PropType } from "vue";
-// import { useTaskStore } from "../../stores/tasks"
 
 interface FormData {
   id: string;
@@ -92,10 +91,6 @@ const prop = defineProps({
     type: Boolean as PropType<boolean>,
     required: true,
   },
-//   addTask: {
-//     type: Function as PropType<(data: FormData) => void>,
-//     required: true,
-//   },
   closeModal: {
     type: Function as PropType<() => void>,
     required: true,
@@ -106,10 +101,8 @@ const prop = defineProps({
   },
 });
 
-// const taskStore = useTaskStore();
 
 const submitForm = async () => {
-  // Validate the form data here if needed
   console.log("Submit");
   prop.closeModal()
 };
