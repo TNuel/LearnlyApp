@@ -3,7 +3,7 @@
     v-show="isVisible"
     class="fixed md:hidden top-0 left-0 w-full h-full flex items-center justify-center bg-black bg-opacity-50 z-50"
     >
-    <div class="w-80">
+    <div class="w-80 bg-white px-8 py-4 rounded-lg">
         <h1 class="text-center font-bold text-gray-700">Add New Task</h1>
       <form @submit.prevent="submitForm">
         <div class="mb-4">
@@ -152,7 +152,7 @@ interface FormData {
   status: string;
 }
 
-defineProps({
+const prop = defineProps({
   isVisible: {
     type: Boolean as PropType<boolean>,
     required: true,
@@ -190,7 +190,7 @@ const submitForm = async () => {
   status: formData.status,
   }
   console.log("Submit", taskData);
-  const result =await taskStore.addTask(taskData);
+  const result = await taskStore.addTask(taskData);
   console.log('add task result', result);
   if(result) {
     formData.id = "";
@@ -200,6 +200,6 @@ const submitForm = async () => {
     formData.status = "";
   }
 //   addTask();
-//   closeModal();
+  prop.closeModal();
 };
 </script>
