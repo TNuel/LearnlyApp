@@ -73,7 +73,7 @@
       </form>
     </div>
 </div>
-<div class="w-80 hidden md:block mt-10">
+<div class="w-80 hidden md:block">
     <h1 class="font-bold text-center text-gray-700">Add New Task</h1>
   <form @submit.prevent="submitForm">
     <div class="mb-4">

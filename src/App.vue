@@ -11,7 +11,7 @@
       Add Task
     </button>
   </div>
-  <div class="flex mx-auto w-full space-x-6 md:w-2/3 mt-8 justify-center">
+  <div class="flex mx-auto w-full space-x-6 lg:w-2/3 mt-8 justify-center">
     <div v-if="tasks.length > 0" class="w-full md:w-1/2">
       <div
         class="flex justify-center text-center items-center mx-auto w-full text-2xl font-bold text-purple-500"
